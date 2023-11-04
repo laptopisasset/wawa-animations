@@ -6,7 +6,7 @@ import { animated, useSpring } from "@react-spring/three";
 import { useGLTF } from "@react-three/drei";
 import React, { useRef } from "react";
 
-export function IceCream(props) {
+export function IceCream({ ...props }) {
   const group = useRef();
   const { nodes, materials } = useGLTF("./models/ice-cream/model.gltf");
 
@@ -33,7 +33,6 @@ export function IceCream(props) {
       tension: 800,
       friction: 20,
     },
-    pause: true,
     loop: true,
   });
 
